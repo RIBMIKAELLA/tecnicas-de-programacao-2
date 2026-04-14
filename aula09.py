@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 # Componente 
 class Bebida(ABC):
     @abstractmethod
-    def custo(self):
+    def custo(self): # são para definir um método abstrato que vai se chamar custo, dentro da classe abstrata ABC
          pass
 
     @abstractmethod
@@ -14,7 +14,7 @@ class Bebida(ABC):
 # Componente Concreto
 class CafeSimples(Bebida):
     def custo(self):
-        return 5.0
+        return 5.0 # a implementação concreta do método abstrato definido na parte inicial do código acima
 
     def descricao(self):
         return "Café Simples"
@@ -23,7 +23,7 @@ class CafeSimples(Bebida):
 # Decorator 
 class DecoradorBedida(Bebida):
     def __init__(self, bebida):
-        self._bebida = bebida
+        self._bebida = bebida # Serve para armazenar a instância do objeto que estamos "decorando"
 
 
 # Decoradores Concretos
